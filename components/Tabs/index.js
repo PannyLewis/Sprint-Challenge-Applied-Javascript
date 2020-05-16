@@ -9,7 +9,7 @@
 //    <div class="tab">topic here</div>
 
 const tabs = document.querySelector(".tabs");
-// console.log(tabs);
+console.log(tabs);
 tabs.appendChild(createTab());
 
 // function getMyData(i) {

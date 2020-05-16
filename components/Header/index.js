@@ -12,7 +12,7 @@
 // and append it to the DOM inside the div.header-container
 
 const header = document.querySelector(".header-container");
-// console.log(header);
+console.log(header);
 header.appendChild(createHeader());
 
 function createHeader() {
