@@ -38,6 +38,7 @@
 //
 // Create a card for each of the articles and add the card to the DOM.
 
+// FIRST AND BEFORE ALL, EVERYTHING MUST BE INSERTED INTO THE EXISTING HTML DIV
 const cards = document.querySelector(".cards-container");
 // console.log(cards);
 
