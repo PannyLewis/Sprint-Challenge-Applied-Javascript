@@ -50,6 +50,7 @@ function carouselMaker() {
   carousel.classList.add("carousel");
   leftButton.classList.add("left-button");
   rightButton.classList.add("right-button");
+  img.classList.add("img");
 
   // add text content or image source:
   /*  this way is repetitive and is time consuming when we need to change images
@@ -61,28 +62,26 @@ function carouselMaker() {
 
   // create an array for the image names then use the template literal to insert the name into the url:
   const imgNames = ["mountains", "computer", "trees", "turntable"];
-  // img.src = "./assets/carousel/${imgNames[i]}.jpeg";
-  img.src = "./assets/carousel/mountains.jpeg";
-
-  // add event listeners:  the i is for the index of the array of imgNames.  Set the i to 0 which would be the 1st image.
   let i = 0;
+  img.src = `../assets/carousel/${imgNames[i]}.jpeg`;
+  // img.src = "../assets/carousel/mountains.jpeg";
+  console.log(img);
+  // add event listeners:  the i is for the index of the array of imgNames.  Set the i to 0 which would be the 1st image.
+
   leftButton.addEventListener("click", () => {
-    img.src = "./assets/carousel/mountains.jpeg";
-    // img.src =
-    //   "./assets/carousel/${imgNames[i]}.jpeg"; /* when they left button is clicked, it is going to show images*/
-    // i =
-    //   i -
-    //   1; /* this is saing which direction to move on the array of images, to move left we subract or decrement */
-    // if (i < 0) {
-    //   i =
-    //     imgNames.length -
-    //     1; /* so i is initiated to 0, so no matter what i is always going to be netive thereofre <0, so as long as i<0, then do this:  lenghth is 4 so index=4-1 so display turntable, 3-1=2 so display trees, 2-1=1 so display computer, 1-1=0 so display mountains.  */
-    // }
+    img.src = `../assets/carousel/${imgNames[i]}.jpeg`; /* when they left button is clicked, it is going to show images*/
+    i =
+      i -
+      1; /* this is saing which direction to move on the array of images, to move left we subract or decrement */
+    if (i < 0) {
+      i =
+        imgNames.length -
+        1; /* so i is initiated to 0, so no matter what i is always going to be negative therefore <0, so as long as i<0, then do this:  lenghth is 4 so index=4-1 so display turntable, 3-1=2 so display trees, 2-1=1 so display computer, 1-1=0 so display mountains.  */
+    }
   });
 
   rightButton.addEventListener("click", () => {
-    img.src =
-      "./assets/carousel/${imgNames[i]}.jpeg"; /* when the right button is clicked, it is going to show images*/
+    img.src = `./assets/carousel/${imgNames[i]}.jpeg`; /* when the right button is clicked, it is going to show images*/
     i =
       i +
       1; /* this is saing which direction to move on the array of images, to move right we increment */
