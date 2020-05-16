@@ -29,27 +29,32 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead.
 
 1. What is the DOM?
+   Document Object Model. For example, intead of writing HTML <div></div>, you can use JS and tell the browser to create a div, like this: document.createElement("div"). You use JS codes to add elements, class and styling, contents, etc. You still have to create one HTML div where you can append/insert the DOM JS that you created.
 
 2. What is an event?
+   Just like the word meaning, something happens when you run the code. It is a word/term that triggers/sets off a function to execute. For example: click, scroll, resize, etc.
 
 3. What is an event listener?
+   It is a JS method that takes 2 argument: #1 argument is a single term that it looks, listens, wait for user input for example click, or scroll, or select, etc; #2 is series of command that tells it what to do when #1 happens, most likely a function or callback.
 
-4. Why would we convert a NodeList into an Array?
+4) Why would we convert a NodeList into an Array?
+   A nodelist is not a true array even though it may look like one. For example, when you use querySelectorAll, you get a list of everything under that class or element. It may not be possible to use the looping method of foreach and map. It will be easier to call on the indexes and easier to loop through once converted into an array.
 
-5. What is a component?
+5) What is a component?
+   It's a DOM block of JS codes. It affects the browser bypassing having to write HTML tags. What's great about them is that they avoid repetitive actions and changes can be made in one place instead of multiple places. For example, if you have to change the price to 100 items, you wouldn't have to do it 100 times, just do in once under the component.
 
 ### Git Set up
 
-- [ ] Fork the project into your GitHub user account
-- [ ] Clone the forked project into a directory on your machine
-- [ ] Create a pull request before you start working on the project requirements. You will continuously push your updates throughout the project.
-- [ ] You are now ready to build this project with your preferred IDE
+- [x] Fork the project into your GitHub user account
+- [x] Clone the forked project into a directory on your machine
+- [x] Create a pull request before you start working on the project requirements. You will continuously push your updates throughout the project.
+- [x] You are now ready to build this project with your preferred IDE
 
 ## Minimum Viable Product
 
 Your finished project must include all of the following requirements:
 
-- [ ] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the HTML file itself.
+- [x] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the HTML file itself.
 
 - [ ] Following the instructions in the `Header/index.js` file, create the Header component.
 
