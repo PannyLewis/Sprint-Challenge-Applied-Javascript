@@ -65,14 +65,18 @@ function carouselMaker() {
   let i = 0;
   img.src = `../assets/carousel/${imgNames[i]}.jpeg`;
   // img.src = "../assets/carousel/mountains.jpeg";
-  console.log(img);
-  // add event listeners:  the i is for the index of the array of imgNames.  Set the i to 0 which would be the 1st image.
+  console.log(
+    img
+  ); /* image won't display because carousel.less has img set to display: none:*/
+  img.style.display = "block"; /*this DOM overides the less codes */
 
+  // add event listeners:  the i is for the index of the array of imgNames.  Set the i to 0 which would be the 1st image.
   leftButton.addEventListener("click", () => {
+    // img; calling variable doesn't work;
     img.src = `../assets/carousel/${imgNames[i]}.jpeg`; /* when they left button is clicked, it is going to show images*/
     i =
       i -
-      1; /* this is saing which direction to move on the array of images, to move left we subract or decrement */
+      1; /* this is saying which direction to move on the array of images, to move left we subract or decrement */
     if (i < 0) {
       i =
         imgNames.length -
